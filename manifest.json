@@ -1,0 +1,41 @@
+{
+    "manifest_version": "2",
+    "api_version": "1",
+    "name": "LocalListeners",
+    "description": "Local listeners extension",
+    "developer_name": "Michael Sandler",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.05
+    },
+    "preferences": [
+        {
+            "id": "local_listeners",
+            "type": "keyword",
+            "name": "Local Listeners",
+            "description": "Local Listeners",
+            "default_value": "los"
+        },
+        {
+            "id": "browser_selector",
+            "type": "select",
+            "name": "Browser Selector",
+            "description": "Which browser should open a local listener address",
+            "default_value": "default",
+            "options": [{
+                "value": "default",
+                "text": "Default system browser"
+            }, {
+                "value": "custom",
+                "text": "Custom browser specified below"
+            }]
+        },
+        {
+            "id": "browser_executable",
+            "type": "input",
+            "name": "Browser Executable",
+            "description": "Path to the browser executable which will open a local listener address",
+            "default_value": "google-chrome-stable"
+        }
+    ]
+}
